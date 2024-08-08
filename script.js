@@ -7,6 +7,8 @@ let secondColorBox = document.getElementById('second-color-box')
 let secondHexCode = document.getElementById('second-hex-code')
 let thirdColorBox = document.getElementById('third-color-box')
 let thirdHexCode = document.getElementById('third-hex-code')
+let fourthColorBox = document.getElementById('fourth-color-box')
+let fourthHexCode = document.getElementById('fourth-hex-code')
 
 
 function generateRandomNumber(){
@@ -42,6 +44,15 @@ button.addEventListener('click', function(){
     }
     thirdColorBox.style.backgroundColor = hexCodeForThirdBox
     thirdHexCode.textContent = hexCodeForThirdBox
+
+
+    //fourth box
+    let hexCodeForFourthBox = '#'
+    for(let myFourthLoop = 0; myFourthLoop < 6; myFourthLoop++){
+        hexCodeForFourthBox += hexadecimalNumberSystem[generateRandomNumber()]
+    }
+    fourthColorBox.style.backgroundColor = hexCodeForFourthBox
+    fourthHexCode.textContent = hexCodeForFourthBox
 
 
  })
